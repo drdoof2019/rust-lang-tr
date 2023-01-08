@@ -17,4 +17,10 @@ Rustun ingilizce dökümantasyonunu local olarak açmak için cmd'ye
 $ rustup doc
 yazılabilir.
 
-# Merhaba Dünya!
+# Merhaba Rust! yazan program geliştirelim.
+bir text dosyası açıp içerisine aşağıdaki kodu yazdım.
+fn main() {
+    println!("Merhaba Rust!");
+}
+ve dosyayı .txt yerine .rs uzantısı ile kaydettim.
+Sonra konsoldan rustc main.rs yazarak programı çalıştırdım. main.exe dosyasını oluşturdu. main.exeyi konsoldan çalıştırınca Merhaba Rust yazısını gördüm.
