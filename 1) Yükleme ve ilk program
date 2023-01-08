@@ -47,3 +47,7 @@ $ cargo check
 komutu ise compile etmeye gerek kalmadan kodu kontrol etmeye yarıyor. Yani her seferinde cargo build ile kontrol edip vakit kaybetmek yerine check ile hızlı bir
 kontrol yapılabilir. proje bitip çalıştırılacağı zaman cargo build çalıştırılır.
 
+Yazdığımız program bitip insanlara yayınlamaya hazır hale geldiğinde
+$ cargo build --release
+ile target/release klasörlerinin altında yayımlanabilir sürüm oluşturabiliriz.(target/debug geliştirirken kullanılırken target/release yayınlanırken kullanılır)
+
