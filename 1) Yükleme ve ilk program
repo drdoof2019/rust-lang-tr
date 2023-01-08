@@ -40,6 +40,10 @@ $ cargo build
 komutu ile build ettikten sonra gelen yeni dosyalar içerisinde şu yoldan exe dosyamıza ulaşabiliriz: .\target\debug\hello_cargo.exe
 yada basitçe
 $ cargo run
-komutu ile de programı çalıştırabiliriz.
+komutu ile de programı çalıştırabiliriz. Ana dizinde oluşan lock uzantılı dosya ile işimiz yok cargo bağımlılıklarını vs tutmak için kullanıyor ve otomatik
+olarak kendisi güncelliyor.
 
+$ cargo check
+komutu ise compile etmeye gerek kalmadan kodu kontrol etmeye yarıyor. Yani her seferinde cargo build ile kontrol edip vakit kaybetmek yerine check ile hızlı bir
+kontrol yapılabilir. proje bitip çalıştırılacağı zaman cargo build çalıştırılır.
 
