@@ -23,4 +23,23 @@ fn main() {
     println!("Merhaba Rust!");
 }
 ve dosyayı .txt yerine .rs uzantısı ile kaydettim.
-Sonra konsoldan rustc main.rs yazarak programı çalıştırdım. main.exe dosyasını oluşturdu. main.exeyi konsoldan çalıştırınca Merhaba Rust yazısını gördüm.
+Sonra konsoldan rustc main.rs yazarak compile ettim. main.exe dosyasını oluşturdu. main.exeyi konsoldan çalıştırınca Merhaba Rust yazısını gördüm.
+Not: println! deki ! işareti println fonksiyonunu değil println makrosunu çağırdığımızı sembolize eder. Yani fonksiyon çağırsaydık ! olmayacaktı.
+
+# Merhaba Cargo
+Cargo rust'un paket yükleme ve sistem kurma platformu. Pythonun pip'ine göre daha gelişmiş. merhaba rust projemiz gibi küçük çaplı projelerde pek lazım olmasa da
+aslında büyük projelerde başından itibaren çok kullanılır. cargo rust'u yüklediğinizde otomatik olarak kurulur. Görmek için cmd'ye
+$ cargo --version
+yazabiliriz.
+
+$ cargo new hello_cargo
+komutu ile hello_cargo dizini oluşturup içerisinde proje dosyalarımızı oluşturduk. dikkat edilirse toml uzantılı bir dosya var ve text editöründe açılınca projenin adı
+versiyonu, bağımlılıkları gibi bilgileri tutuyor. src dosyasının içinde ise main.rs dosyamız var ve içinde merhaba dünya kodları hazır olarak geliyor.
+Bunu çalıştırmak için 
+$ cargo build
+komutu ile build ettikten sonra gelen yeni dosyalar içerisinde şu yoldan exe dosyamıza ulaşabiliriz: .\target\debug\hello_cargo.exe
+yada basitçe
+$ cargo run
+komutu ile de programı çalıştırabiliriz.
+
+
