@@ -16,3 +16,5 @@ yazmak yeterli :)
 Rustun ingilizce dökümantasyonunu local olarak açmak için cmd'ye
 $ rustup doc
 yazılabilir.
+
+# Merhaba Dünya!
