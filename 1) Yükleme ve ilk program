@@ -1,1 +1,18 @@
+https://www.rust-lang.org/
+Yükleme işlemini uzun uzadıya anlatmaya gerek yok siteye girip yönergeleri takip etmek yeterli.
 
+Yükleme işlemi tamamlandıktan sonra cmd'ye
+$ rustc --version
+Yazarak yükleme işlemi başarılı mı kontrol edebiliriz.
+
+Yeni versiyonlara güncelleme yapmak için cmd'ye
+$ rustup update
+yazılabilir.
+
+Silme gafletine düşersekte cmd'ye
+$ rustup self uninstall
+yazmak yeterli :)
+
+Rustun ingilizce dökümantasyonunu local olarak açmak için cmd'ye
+$ rustup doc
+yazılabilir.
