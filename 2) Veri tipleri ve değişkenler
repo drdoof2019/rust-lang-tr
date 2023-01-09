@@ -1,0 +1,22 @@
+let a:u8 = 196; // u : unsigned 8 bit (2^N=256) -N=8 için- 0,255 arası değer alır
+println!("a = {}",a);
+// Output : a = 196
+// Ancak sonrasında a yı değiştirmek istersek,
+a = 100;
+// bu hata verecektir. Çünkü a immutable (değiştirilemez) olarak tanımlandı. mutable tanımlamak için:
+let mut a:i8 = 100; // i : signed 8 bit (-2^(N-1) ile 2^(N-1)-1) yani -128,+127 arası değer alır
+// mut sayesinde artık a'yı değiştirilebilir olarak tanımladık.
+
+
+let c = 12345;  // dikkat edilirse burda i8 u8 gibi tanımlamalar yapmadık. Böyle durumda otomatik olarak i32 olarak tanımlıyor.
+println!("c nin değeri: {} ve kapladığı alan {} bytedır.", c, mem::align_of_val(&c));
+// mem::align_of_val kullanmak için önce std kütüphanesinden mem modülünü çağırdık. (pythondaki define olayı) bunu yapmak için kodun başına
+use std::mem;
+// yazdık. burda output: "c nin değeri: 12345 ve kapladığı alan 4 bytedır." 8 bit = 1 byte
+
+// şimdi isize, usize nedir ona bakalım. Bilgisayarlarımız 32bit veya 64 bit mimariye sahip olabiliyor. Biz bir değişken tanımlarken 
+// bilgisayarın mimarisi neyse onu tanımlamak için isize usize kullanıyoruz. Örn:
+let d:isize = -550;
+let d_boyut = mem::align_of_val(&d);
+println!("d'nin değeri: {} ve boyutu {} byte. Bilgisayarınız {} bit işlemciye sahip.",d, d_boyut, d_boyut*8);
+// output: d'nin değeri: -550 ve boyutu 8 byte. Bilgisayarınız 64 bit mimariye sahip.
