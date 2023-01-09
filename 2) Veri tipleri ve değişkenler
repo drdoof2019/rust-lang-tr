@@ -20,3 +20,18 @@ let d:isize = -550;
 let d_boyut = mem::align_of_val(&d);
 println!("d'nin değeri: {} ve boyutu {} byte. Bilgisayarınız {} bit işlemciye sahip.",d, d_boyut, d_boyut*8);
 // output: d'nin değeri: -550 ve boyutu 8 byte. Bilgisayarınız 64 bit mimariye sahip.
+
+// karakter tanımlama
+let e:char = 'e';
+println!("e nin değeri: {} ve kapladığı alan {} bytedır.", e, mem::align_of_val(&e));
+// output: e nin değeri: e ve kapladığı alan 4 bytedır.
+
+// virgüllü sayı (float) tanımlama
+let f:f32 = 27.5;
+println!("f nin değeri: {} ve kapladığı alan {} bytedır.", f, mem::align_of_val(&f));
+// output: f nin değeri: 27.5 ve kapladığı alan 4 bytedır.
+
+// boolen tanımlama
+let g:bool = false;
+println!("g nin değeri: {} ve kapladığı alan {} bytedır.", g, mem::align_of_val(&g));
+// output: g nin değeri: false ve kapladığı alan 1 bytedır.
