@@ -35,3 +35,27 @@ println!("f nin değeri: {} ve kapladığı alan {} bytedır.", f, mem::align_of
 let g:bool = false;
 println!("g nin değeri: {} ve kapladığı alan {} bytedır.", g, mem::align_of_val(&g));
 // output: g nin değeri: false ve kapladığı alan 1 bytedır.
+
+
+// Fonksiyon tanımlama
+fn ornek_fonksiyon {
+//işlemler burada yapılır
+}
+
+
+// Aritmetik işlemler
+let mut a = 2*11-2;
+// println!("{}", a)
+let a_kup = i32::pow(a, 3);
+println!("{}'nın 3. kuvveti = {}", a, a_kup);
+// output: 20'nın 3. kuvveti = 8000
+
+
+let b = 2.7;
+let b_kup = f64::powi(b,3); // integer cinsinden üssünü almak için
+let b_pi = f64::powf(b,std::f64::consts::PI); // float cinsinden üssünü almak için
+println!("{0}'nin 3. kuvveti = {1} ve {0}'nin Pi. kuvveti = {2}", b, b_kup, b_pi) // indis numarası girerek b yi 2 kere girmek zorunda kalmadık
+// output : 2.7'nin 3. kuvveti = 19.683000000000003 ve 2.7'nin Pi. kuvveti = 22.655269485887153
+
+
+
